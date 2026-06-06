@@ -1,0 +1,20 @@
+import { defineConfig, loadEnv } from '@medusajs/framework/config'
+
+loadEnv(process.env.NODE_ENV || 'development', process.cwd())
+
+module.exports = defineConfig({
+  projectConfig: {
+    databaseUrl: process.env.DATABASE_URL,
+    http: {
+      storeCors:  process.env.STORE_CORS!,
+      adminCors:  process.env.ADMIN_CORS!,
+      authCors:   process.env.AUTH_CORS!,
+      jwtSecret:  process.env.JWT_SECRET  ?? 'change-me-in-production',
+      cookieSecret: process.env.COOKIE_SECRET ?? 'change-me-in-production',
+    },
+  },
+  admin: {
+    disable: false,
+    backendUrl: process.env.MEDUSA_BACKEND_URL,
+  },
+})
