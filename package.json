@@ -9,11 +9,12 @@
     "seed": "medusa exec ./src/scripts/seed.ts"
   },
   "dependencies": {
-    "@medusajs/medusa": "^2.0.0",
-    "@medusajs/framework": "^2.0.0"
+    "@medusajs/framework": "^2.0.0",
+    "@medusajs/medusa": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "engines": {
