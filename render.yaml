@@ -11,7 +11,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        sync: false       # paste your Neon connection string here in Render dashboard
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: COOKIE_SECRET
@@ -19,8 +19,8 @@ services:
       - key: STORE_CORS
         value: https://toothandnail-v2-7aft.vercel.app
       - key: ADMIN_CORS
-        sync: false       # set to your Render URL after first deploy e.g. https://tooth-and-nail-backend.onrender.com
+        value: https://tooth-and-nail-backend.onrender.com
       - key: AUTH_CORS
-        sync: false       # same as ADMIN_CORS + store URL
+        value: https://tooth-and-nail-backend.onrender.com,https://toothandnail-v2-7aft.vercel.app
       - key: MEDUSA_BACKEND_URL
-        sync: false       # your Render URL e.g. https://tooth-and-nail-backend.onrender.com
+        value: https://tooth-and-nail-backend.onrender.com
